@@ -1,0 +1,286 @@
+/*font-family: 'Bebas Neue', cursive;
+font-family: 'Lobster', cursive;*/
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Koulen&family=Lobster&display=swap');
+*{
+
+}
+
+body {
+    margin: 0;
+    
+    background-image: url(./images/bg.png);
+    font-family: 'Bebas Neue', cursive;
+    text-decoration: none;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+.whatsapp {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 9999;
+}
+
+
+/*CABECALHO*/
+
+.cabecalho-coisas {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-items: center;
+}
+
+.cabecalho-escrito {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    padding: 50px;
+    padding-bottom: 30px;
+}
+
+.cabecalho-titulo {
+    font-weight: 400px;
+    font-size: 64px;
+    color: white;
+    font-family: 'Bebas Neue', cursive;
+
+}
+
+.cabecalho-subtitulo{
+    font-family: 'Bebas Neue', cursive;
+    font-weight: 400;
+    font-size: 24px;
+    color: whitesmoke;
+}
+
+.cabecalho-logo {
+    height: 330px;
+    padding-right: 100px;
+    filter: drop-shadow( 0 4px 4px rgba(0, 0, 0, 0.25));
+    transition: all cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.cabecalho-logo::after {
+    position: absolute;
+    filter: drop-shadow( 0 5px 15px rgba(0, 0, 0, 0.25));
+    transition: all cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.cabecalho-logo:hover {
+    transform: scale(1.25,1.25);
+}
+ 
+.midiasociais {
+    margin-top: 1rem;
+    display: flex;
+}
+
+.midiasociais a {
+    text-decoration: none;
+    color: whitesmoke;
+    padding: 1rem 4rem;
+    border: 1px solid white;
+    min-width: 4rem;
+    align-items: center;
+    justify-content: center;
+    transition: .5 ease-in-out;
+}
+
+.midiasociais a:hover {
+    background-color: #6734bc;
+}
+
+
+
+
+/* MENU HAM*/
+
+.cabecalho-checkbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.checkbox {
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 9999;
+    transition: 400ms ease-in-out 0s;
+}
+
+.checkbox .traco {
+    height: 2px;
+    width: 50px;
+    background-color: white ;
+    filter: drop-shadow(0 2px 2px rgba(0,0,0, 0.75));
+    position: absolute;
+    border-radius: 4px;
+    transition: 0.5s ease-in-out;
+}
+
+.checkbox .traco:nth-child(1) {
+    top: 26px;
+    transform: rotate(0);
+}
+
+.checkbox .traco:nth-child(2) {
+    top: 46px;
+    transform: rotate(0);
+}
+
+.checkbox .traco:nth-child(3) {
+    top: 66px;
+    transform: rotate(0);
+}
+
+#toogle {
+    display: none;
+}
+
+/*MENU*/
+
+.menu {
+    position: absolute;
+    top: 28px;
+    right: 30px;
+    background-color: transparent;
+    height: 4px;
+    width: 40px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 0px 0px black;
+    z-index: -1;
+    transition: 400ms ease-in-out 0s;
+}
+
+.menu-itens {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    opacity: 0;
+    visibility: hidden;
+    transition: 400ms ease-in-out 0s;
+}
+
+.menu-itens ul {
+    list-style-type: none;
+}
+
+.menu-itens ul a {
+    margin: 10px 0;
+    color: black;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 40px;
+}
+
+/*ANIMACAO*/
+
+#toogle:checked + .checkbox .traco:nth-child(1){
+    transform: rotate(45deg);
+    top: 47px;
+}
+
+#toogle:checked + .checkbox .traco:nth-child(2){
+    transform: translate(-100px);
+    width: 30px;
+    top: 47px;
+    visibility: hidden;
+    opacity: 0;
+}
+
+#toogle:checked + .checkbox .traco:nth-child(3){
+    transform: rotate(-45deg);
+    top: 48px;
+}
+
+#toogle:checked ~ .menu{
+    box-shadow: 0px 0px 0px 100vmax white;
+    z-index: 1;
+}
+
+#toogle:checked ~ .menu-itens{
+    visibility: visible;
+    opacity: 1;
+}
+
+
+/*CONTEUDO HOME*/
+
+.conteudo {
+    margin-bottom: 48px;
+    border-top: 0.4px solid white;
+    padding: 100px;
+}
+
+.conteudo-main {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.localizacao-class {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+}
+
+.local-image {
+    width: 100px;
+    padding-left: 170px;
+}
+
+.localizacao-titulo{
+    color: white;
+    font-size: 40px;
+    font-family: 'Koulen', cursive;
+    font-weight: 400;
+}
+
+.localizcao-subtitulo {
+    color: whitesmoke;
+    font-size: 20px;
+    font-family: 'Bebas Neue', cursive;
+    font-weight: 100;
+    
+}
+
+.maps {
+    height: 300px;
+}
+
+/*RODAPE*/
+
+.rodape {
+    display: flex;
+    margin-inline: auto;
+    max-width: 768px;
+    justify-content: space-around;
+}
+
+.rodape p {
+    margin: 0px 5px;
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+
+.rodape img {
+    width: 20px;
+}
