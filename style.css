@@ -76,6 +76,7 @@ body {
 .midiasociais {
     margin-top: 1rem;
     display: flex;
+    font-size: 25px;
 }
 
 .midiasociais a {
