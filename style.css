@@ -7,7 +7,7 @@ font-family: 'Lobster', cursive;*/
 
 body {
     margin: 0;
-    
+    background-position: center;
     background-image: url(./images/bg.png);
     font-family: 'Bebas Neue', cursive;
     text-decoration: none;
@@ -356,6 +356,7 @@ body {
     background: url(./images/criadores.jpg) center/cover;
     height: 50%;
     width: 100%;
+    background-position: center;
 }
 
 .topocard {
