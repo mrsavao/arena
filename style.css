@@ -234,6 +234,8 @@ body {
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
+    gap: 35px;
+    text-shadow: 1px 1px 2px black;
 }
 
 .localizacao-class {
@@ -249,7 +251,7 @@ body {
 
 .localizacao-titulo{
     color: white;
-    font-size: 40px;
+    font-size: 37px;
     font-family: 'Koulen', cursive;
     font-weight: 400;
 }
